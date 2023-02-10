@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.xunmeng.pinduoduo">
+
+    <application
+            android:allowBackup="true"
+            android:dataExtractionRules="@xml/data_extraction_rules"
+            android:fullBackupContent="@xml/backup_rules"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:roundIcon="@mipmap/ic_launcher_round"
+            android:supportsRtl="true"
+            android:theme="@style/Theme.DeviceMainPluginPxx"
+            tools:targetApi="31">
+        <activity
+                android:name=".PluginSettings"
+                android:exported="true">
+        <intent-filter>
+            <action android:name="android.intent.action.VIEW"/>
+            <category android:name="android.intent.category.DEFAULT"/>
+            <category android:name="android.intent.category.BROWSABLE"/>
+            <data
+                    android:host="devicemain"
+                    android:scheme="jabbr"
+                    android:path="/plugin/1/settings"/>
+        </intent-filter>
+        </activity>
+        <activity
+                android:name=".BlockerActivity"
+                android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"> </action>
+                <data android:scheme="qngaccv79cv29i"> </data>
+                <data android:scheme="pddopen"> </data>
+                <data android:scheme="pinduoduo"> </data>
+                <data android:scheme="weixinn"> </data>
+                <data android:scheme="httpssn"> </data>
+                <data android:scheme="float-check-permission-done"> </data>
+                <data android:scheme="alipaycallback"> </data>
+                <category android:name="android.intent.category.DEFAULT"> </category>
+                <category android:name="android.intent.category.BROWSABLE"> </category>
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW"> </action>
+                <category android:name="android.intent.category.DEFAULT"> </category>
+                <category android:name="android.intent.category.BROWSABLE"> </category>
+                <data android:scheme="http"> </data>
+                <data android:scheme="https"> </data>
+                <data android:host="4pn.cn"> </data>
+                <data android:host="y4n.cn"> </data>
+                <data android:host="social.pinduoduo.com"> </data>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED"> </action>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"> </action>
+                <data android:scheme="package"> </data>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"> </action>
+                <category android:name="android.intent.category.DEFAULT"> </category>
+                <category android:name="android.intent.category.BROWSABLE"> </category>
+                <data android:scheme="tencent1104790111"> </data>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"> </action>
+                <category android:name="android.intent.category.BROWSABLE"> </category>
+                <category android:name="android.intent.category.DEFAULT"> </category>
+                <data android:scheme="pinduoduoalipays"> </data>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"> </action>
+                <category android:name="android.intent.category.BROWSABLE"> </category>
+                <category android:name="android.intent.category.DEFAULT"> </category>
+                <data android:scheme="qwallet1104790111"> </data>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"> </action>
+                <category android:name="android.intent.category.BROWSABLE"> </category>
+                <category android:name="android.intent.category.DEFAULT"> </category>
+                <data android:scheme="pdd_ddwallet"> </data>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED"> </action>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"> </action>
+                <action android:name="android.intent.action.INSTALL_PACKAGE"> </action>
+                <data android:scheme="package"> </data>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_MOUNTED"> </action>
+                <action android:name="android.intent.action.MEDIA_UNMOUNTED"> </action>
+                <action android:name="android.intent.action.MEDIA_CHECKING"> </action>
+                <action android:name="android.intent.action.MEDIA_EJECT"> </action>
+                <data android:scheme="file"> </data>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"> </action>
+                <category android:name="android.intent.category.DEFAULT"> </category>
+                <category android:name="android.intent.category.BROWSABLE"> </category>
+                <data android:scheme="pddwallet" android:host="pinduoduo.com" android:path="/fast_bind"> </data>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"> </action>
+                <data android:scheme="pdd-titan-opx"> </data>
+                <category android:name="android.intent.category.DEFAULT"> </category>
+            </intent-filter>
+        </activity>
+        <activity
+                android:name=".MainActivity"
+                android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                        android:host="devicemain"
+                        android:scheme="jabbr"
+                        android:path="/plugin/1/home"/>
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
